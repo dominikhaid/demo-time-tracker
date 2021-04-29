@@ -48,7 +48,7 @@ export default function TaskSmall({
   };
 
   const convFromSecs = sec => {
-    var a = sec.split(':');
+    var a = sec.split ? sec.split(':') : 0;
     var seconds = +a[0] * 60 * 60 + +a[1] * 60 + +a[2];
     return seconds;
   };
