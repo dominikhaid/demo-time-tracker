@@ -63,7 +63,7 @@ if (serverOptions.server === 'next') {
       });
 
       httpServer ? httpServer.listen(port) : server.listen(port);
-      console.debug(`Next.js server at: ${process.env.HOST}:${port}`);
+      console.debug(`Next.js server at: ${process.env.HOST}:${port}/app`);
     })
     .catch(ex => {
       console.error(ex.stack);
