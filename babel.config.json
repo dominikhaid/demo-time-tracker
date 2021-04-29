@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-env": {},
+        "preset-react": {"runtime": "automatic"},
+        "class-properties": {},
+        "transform-runtime": {},
+        "experimental-modern-preset": {},
+        "styled-jsx": {},
+        "preset-typescript": {}
+      }
+    ]
+  ],
+  "ignore": ["public/icons", "public/images", "node_modules"],
+  "plugins": ["@babel/plugin-transform-runtime"]
+}

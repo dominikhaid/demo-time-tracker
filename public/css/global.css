@@ -1,0 +1,477 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
+@layer base {
+  body {
+    @apply absolute font-sans;
+  }
+
+  nav h1,
+  nav h2,
+  nav h3,
+  nav h4,
+  nav h5,
+  nav h6,
+  main#main h1,
+  main#main h2,
+  main#main h3,
+  main#main h4,
+  main#main h5,
+  main#main h6 {
+    @apply font-bold text-primary dark:text-primary;
+  }
+
+  nav h1,
+  main#main h1 {
+    @apply text-2xl mb-lg mt-lg;
+  }
+
+  nav h2,
+  main#main h2 {
+    @apply text-xl text-left mt-4xl mb-xl;
+  }
+
+  nav h3,
+  main#main h3 {
+    @apply text-lg text-xl text-left mt-2xl mb-xl;
+  }
+
+  nav h4,
+  main#main h4 {
+    @apply text-lg mt-xl;
+  }
+
+  nav h5,
+  main#main h5 {
+    @apply mt-lg text-md;
+  }
+
+  nav h6,
+  main#main h6 {
+    @apply text-sm mt-md;
+  }
+
+  button {
+    @apply font-semibold leading-5 transition-transform duration-500 ease-in-out md:leading-7 lg:leading-7 xl:leading-7 py-xs px-xl justify-self-center disabled:opacity-30 disabled:cursor-not-allowed disabled:bg-gray disabled:border-gray;
+  }
+
+  button.big {
+    @apply font-semibold leading-7 py-lg px-4xl;
+  }
+
+  button.small {
+    @apply font-semibold leading-4 py-xs px-xs;
+  }
+
+  section.modal:not(.demo) {
+    @apply fixed w-1/2 top-1/4 left-1/4 text-secondary;
+  }
+
+  section.modal {
+    @apply rounded shadow-2xl bg-secondary-lightest p-xl;
+  }
+
+  section.modal li {
+    @apply border-b cursor-pointer text-secondary p-xl border-secondary-light hover:border-b-2;
+  }
+
+  section.modal li.active {
+    @apply border-b cursor-pointer p-xl border-secondary-darkest bg-secondary-light;
+  }
+
+  form {
+    @apply text-secondary;
+  }
+
+  fieldset,
+  fieldset > button {
+    @apply flex flex-row flex-wrap items-center justify-start flex-grow space-x-sm sm:m-none sm:justify-start;
+  }
+
+  main#main fieldset > input:not([type='radio']),
+  main#main fieldset > label {
+    @apply sm:w-75;
+  }
+
+  main#main fieldset > input,
+  main#main fieldset > label {
+    @apply sm:ml-none mt-none mt-lg;
+  }
+
+  main#main fieldset > button.btn-primary {
+    @apply sm:ml-none sm:mt-lg sm:flex-none;
+  }
+
+  fieldset > [type='text'],
+  fieldset > [type='email'],
+  fieldset > [type='url'],
+  fieldset > [type='password'],
+  fieldset > [type='number'],
+  fieldset > [type='date'],
+  fieldset > [type='datetime-local'],
+  fieldset > [type='month'],
+  fieldset > [type='search'],
+  fieldset > [type='tel'],
+  fieldset > [type='time'],
+  fieldset > [type='week'],
+  fieldset > [multiple],
+  fieldset > textarea,
+  fieldset > select {
+    @apply relative leading-7 border-t-0 border-b-2 border-l-0 border-r-0 outline-none py-xs px-none ring-0 focus:ring-0 border-primary focus:outline-none focus:shadow-none;
+  }
+
+  [type='text'],
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [multiple],
+  textarea,
+  select {
+    @apply relative flex-auto flex-grow font-semibold bg-transparent border-t-0 border-b-2 border-l-0 border-r-0 outline-none focus:text-secondary-dark focus:border-secondary ring-0 border-primary focus:outline-none focus:shadow-none placeholder-primary-light placeholder-opacity-40 text-primary p-md disabled:opacity-30;
+  }
+
+  input[type='radio'] {
+    @apply ml-lg text-primary bg-secondary-light;
+  }
+
+  input[type='checkbox'] {
+    @apply border-2 rounded-sm border-primary ml-lg text-primary bg-secondary-light;
+  }
+
+  main#main fieldset > * {
+    @apply sm:m-none;
+  }
+
+  fieldset,
+  fieldset.labeled {
+    @apply py-lg;
+  }
+
+  fieldset:first-child,
+  fieldset.labeled:first-child {
+    @apply rounded-t-lg;
+  }
+
+  fieldset:last-child,
+  fieldset.labeled:last-child {
+    @apply rounded-b-lg;
+  }
+
+  fieldset.labeled > label {
+    @apply flex-1 font-bold border-2 rounded-l-lg bg-gray-lightest p-md text-secondary border-gray-lightest;
+  }
+
+  label {
+    @apply flex-auto flex-grow font-bold p-md text-gray-darkest dark:text-gray-darkest;
+  }
+
+  #__next main a,
+  #root main a {
+    @apply text-sm font-semibold text-secondary-darkest dark:text-secondary dark:hover:text-primary hover:text-secondary-dark;
+  }
+
+  #__next #main,
+  #root #main {
+    @apply overflow-hidden text-gray-darkest dark:text-gray-darkest;
+  }
+
+  #__next #main h1,
+  #__next #main h2,
+  #__next #main h3,
+  #__next #main h4,
+  #__next #main h5,
+  #__next #main h6,
+  #root #main h1,
+  #root #main h2,
+  #root #main h3,
+  #root #main h4,
+  #root #main h5,
+  #root #main h6 {
+    @apply font-bold text-primary dark:text-primary;
+  }
+
+  ul > li::before {
+    display: none;
+  }
+
+  nav ul > li,
+  main ul > li {
+    @apply mt-lg mb-lg py-lg;
+  }
+
+  footer p {
+    @apply absolute text-center px-4xl w-100 text-primary text-md;
+  }
+
+  footer small {
+    @apply text-secondary-dark;
+  }
+
+  svg {
+    @apply fill-current;
+  }
+}
+
+@layer components {
+  .main-bg {
+    @apply shadow-2xl dark:shadow-xl dark:from-secondary-dark dark:via-secondary-dark dark:to-secondary-darkest bg-gradient-to-t from-secondary-light via-secondary to-secondary;
+  }
+
+  .gradient-primary-b {
+    @apply bg-gradient-to-tr from-primary-light via-primary-light to-primary;
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary-dark to-primary-light;
+  }
+
+  .gradient-secondary-b {
+    @apply bg-gradient-to-tr from-secondary-light via-secondary to-secondary;
+  }
+
+  .gradient-secondary {
+    @apply bg-gradient-to-r from-secondary to-secondary-light;
+  }
+
+  main#main .main-headline {
+    @apply border-b-2 px-none pt-none pb-lg dark:border-primary border-secondary-darkest;
+  }
+
+  .btn-secondary,
+  .btn-success {
+    @apply text-white border-2 rounded-sm border-secondary focus:border-secondary bg-gradient-to-tr from-secondary-dark via-secondary to-secondary-light;
+  }
+
+  .btn-secondary:hover svg,
+  .btn-secondary:hover p,
+  .btn-success:hover svg,
+  .btn-success:hover p {
+    @apply animate-hvr-icon-pulse-shrink;
+  }
+
+  .btn-primary {
+    @apply text-white border-2 rounded-sm border-primary-dark bg-gradient-to-tr from-primary-dark via-primary-light to-primary-light focus:border-primary;
+  }
+
+  .btn-primary:hover svg,
+  .btn-primary:hover p {
+    @apply animate-hvr-icon-pulse-shrink;
+  }
+
+  .btn-ghost {
+    @apply flex content-center justify-center text-white hover:bg-gray-lightest m-none p-none;
+  }
+
+  .btn-outlined {
+    @apply text-white border-2 border-white;
+  }
+  .btn-icon:not(.btn-secondary):not(.btn-primary) {
+    @apply rounded-full;
+  }
+
+  button.btn-icon:not(.svg-absolute):not(.btn-secondary),
+  button.btn-icon:not(.btn-secondary) svg {
+    @apply hover:animate-hvr-icon-push;
+  }
+
+  .container-normal {
+    @apply flex flex-col justify-center flex-grow mx-auto overflow-hidden tracking-wide break-words appearance-none xl:container xl:max-w-3/4 lg:prose-lg p-none;
+  }
+
+  .container-full {
+    @apply flex flex-col justify-center flex-grow max-w-full mx-auto overflow-hidden tracking-wide break-words appearance-none lg:prose-lg;
+  }
+
+  .spaced {
+    @apply flex space-x-lg;
+  }
+
+  .spaced-lg {
+    @apply flex space-x-3xl;
+  }
+
+  .message-service,
+  .message-service.loading {
+    @apply bg-primary;
+  }
+
+  .message-service.error {
+    @apply bg-red;
+  }
+
+  .message-service.info {
+    @apply bg-yellow;
+  }
+
+  .message-service.success {
+    @apply bg-green;
+  }
+
+  .message-service,
+  .message-service.loading {
+    @apply bg-primary;
+  }
+
+  .message-service.error > div {
+    @apply border-2 border-white fill-current text-red bg-red;
+  }
+
+  .message-service.info > div {
+    @apply border-2 border-white fill-current text-yellow bg-yellow;
+  }
+
+  .message-service.success > div {
+    @apply border-2 border-white fill-current text-green bg-green;
+  }
+
+  .message-service > div,
+  .message-service.loading > div {
+    @apply border-2 border-white fill-current text-primary bg-primary;
+  }
+
+  #background {
+    @apply absolute w-full top-none left-none bg-secondary-lightest dark:bg-gray-darkest dark:opacity-95;
+  }
+  .form-grid {
+    @apply sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 sm:gap-sm xl:gap-2xl md:p-lg md:gap-xl lg:gap-2xl;
+  }
+  .app-drawer .form-grid {
+    @apply grid-cols-1 gap-2xl;
+  }
+}
+
+@responsive {
+  .styled-a,
+  .styled-a a {
+    @apply text-gray hover:text-gray-dark !important;
+  }
+
+  .styled-a.active,
+  .styled-a.active a,
+  .styled-a a.active {
+    @apply text-gray-dark !important;
+  }
+}
+
+:root {
+  --color-primary: #14b8a6;
+  --color-secundary: #009ce5;
+  --color-white: #fcfcfc;
+  --color-bg-light: rgba(238, 242, 255);
+  --color-green: #22c55e;
+  --color-black: #111827;
+  --color-bg-dark: #111827;
+  --tw-ring-color: var(--color-primary);
+  --weather-paddig-x: 2.25rem;
+  --weather-paddig-y: 2.25rem;
+  --main-width: 100%;
+  --nav-width: 100%;
+  --main-height: 100%;
+  --weather-col-width: calc(var(--main-width) - var(--weather-paddig-x));
+  --fiveday-col: var(--weather-col-width) var(--weather-col-width)
+    var(--weather-col-width) var(--weather-col-width) var(--weather-col-width)
+    var(--weather-col-width) var(--weather-col-width) var(--weather-col-width)
+    var(--weather-col-width) var(--weather-col-width);
+  --tomorrow-col: var(--weather-col-width) var(--weather-col-width);
+  --current-col: var(--weather-col-width);
+  --weather-day-switcher-w: 55px;
+}
+
+#__next {
+  transition-property: left width;
+  transition-duration: 0.2s;
+}
+
+#__next {
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.layout.grid-full {
+  display: grid;
+  grid-template-rows: auto minmax(200px, 1fr) auto;
+  min-height: 100vh;
+  max-height: 100vh;
+  position: relative;
+}
+
+#__next .main-headline,
+#root .main-headline {
+  width: calc(100% - var(--weather-paddig-x));
+}
+
+a {
+  text-underline-offset: 0.3rem;
+}
+
+h4 {
+  text-underline-offset: 0.3rem;
+}
+
+/*NOTE HIGH RES SCREENS*/
+@media screen and (min-width: 2201px) {
+}
+
+/*NOTE DESKTOP SCREENS*/
+@media screen and (max-width: 2199px) {
+}
+
+/*NOTE TABLET*/
+@media screen and (max-width: 1280px) {
+}
+
+/*NOTE MOBILE*/
+@media screen and (max-width: 765px) {
+  .layout.grid-full {
+    min-height: unset;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.app-drawer input {
+  max-width: 210px !important;
+}
+
+/* #register-page input {
+  max-width: 210px !important;
+} */
+
+@media screen and (max-width: 355px) {
+  input {
+    max-width: 170px !important;
+  }
+
+  #register-page input {
+    max-width: 170px !important;
+  }
+
+  .container-normal {
+    padding: 0 !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+  }
+
+  #product-list,
+  footer,
+  header {
+    max-width: 100vw;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "default",
+    "host": "127.0.0.1",
+    "dialect": "sqlite",
+    "storage": "./database/tasks.sqlite"
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "port": "3000",
+    "database": "default",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "default",
+    "port": "80",
+    "host": "127.0.0.1",
+    "dialect": "sqlite",
+    "storage": "./database/tasks.sqlite"
+  }
+}

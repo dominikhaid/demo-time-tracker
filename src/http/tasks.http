@@ -1,0 +1,55 @@
+
+@host=http://localhost:3000/app
+@api=/api
+@tasks=/tasks
+@search_task_id=103
+@search_task_desc=example@exaple.de
+
+@new_task_name=task4
+@new_task_desc=this task is created through the api
+
+@update_task_id=1
+@update_task_name=User Example2
+@update_task_desc=User 2
+
+
+
+//SERVER STATUS
+GET {{host}}/api HTTP/1.1
+content-type: application/json
+//API STATUS
+###
+
+
+//GET ALL TASKS
+GET {{host}}{{api}}{{tasks}} HTTP/1.1
+content-type: application/json
+###
+
+
+//CREATE TASKS
+POST {{host}}{{api}}{{tasks}} HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+name={{new_task_name}}
+&desc={{new_task_desc}}
+###
+
+
+POST {{host}}{{api}}{{tasks}}?name={{new_task_name}}&desc={{new_task_desc}} HTTP/1.1
+content-type: application/json
+###
+
+
+//UPDATE TASK
+PATCH  {{host}}{{api}}{{tasks}}/{{update_task_id}} HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+name={{update_task_name}}
+&desc={{update_task_desc}}}
+&id={{update_task_id}}
+###
+
+PATCH {{host}}{{api}}{{tasks}}?name={{update_task_name}}&desc={{update_task_desc}}&id={{update_task_id}} HTTP/1.1
+content-type: application/json
+###
